@@ -1,0 +1,198 @@
+{
+   "gaugeData": [
+      {
+         "name": "Quality Score",
+         "score": 72,
+         "vsly": null,
+         "sample": 133
+      },
+      {
+         "name": "Basics",
+         "score": 71,
+         "vsly": null,
+         "sample": 133
+      },
+      {
+         "name": "Interaction",
+         "score": 68,
+         "vsly": null,
+         "sample": 133
+      },
+      {
+         "name": "Expertise",
+         "score": 70,
+         "vsly": null,
+         "sample": 133
+      },
+      {
+         "name": "Process",
+         "score": 75,
+         "vsly": null,
+         "sample": 133
+      },
+      {
+         "name": "Knowledge",
+         "score": 76,
+         "vsly": null,
+         "sample": 133
+      }
+   ],
+   "areaData": {
+      "Quality Score": [
+         {
+            "date": "Apr",
+            "sample": 21,
+            "score": 75,
+            "vsly": 0
+         },
+         {
+            "date": "May",
+            "sample": 110,
+            "score": 71,
+            "vsly": 0
+         },
+         {
+            "date": "Jun",
+            "sample": 2,
+            "score": 62,
+            "vsly": 0
+         },
+         {
+            "date": "Jul",
+            "sample": 0,
+            "score": 0,
+            "vsly": 0
+         }
+      ],
+      "Basics": [
+         {
+            "date": "Apr",
+            "sample": 29,
+            "score": 78,
+            "vsly": 0
+         },
+         {
+            "date": "May",
+            "sample": 66,
+            "score": 62,
+            "vsly": 0
+         },
+         {
+            "date": "Jun",
+            "sample": 2,
+            "score": 42,
+            "vsly": 0
+         },
+         {
+            "date": "Jul",
+            "sample": 51,
+            "score": 63,
+            "vsly": 0
+         }
+      ],
+      "Interaction": [
+         {
+            "date": "Apr",
+            "sample": 54,
+            "score": 92,
+            "vsly": 0
+         },
+         {
+            "date": "May",
+            "sample": 110,
+            "score": 43,
+            "vsly": 0
+         },
+         {
+            "date": "Jun",
+            "sample": 2,
+            "score": 34,
+            "vsly": 0
+         },
+         {
+            "date": "Jul",
+            "sample": 0,
+            "score": 0,
+            "vsly": 0
+         }
+      ],
+      "Expertise": [
+         {
+            "date": "Apr",
+            "sample": 29,
+            "score": 88,
+            "vsly": 0
+         },
+         {
+            "date": "May",
+            "sample": 55,
+            "score": 61,
+            "vsly": 0
+         },
+         {
+            "date": "Jun",
+            "sample": 26,
+            "score": 35,
+            "vsly": 0
+         },
+         {
+            "date": "Jul",
+            "sample": 121,
+            "score": 46,
+            "vsly": 0
+         }
+      ],
+      "Process": [
+         {
+            "date": "Apr",
+            "sample": 31,
+            "score": 85,
+            "vsly": 0
+         },
+         {
+            "date": "May",
+            "sample": 66,
+            "score": 77,
+            "vsly": 0
+         },
+         {
+            "date": "Jun",
+            "sample": 23,
+            "score": 57,
+            "vsly": 0
+         },
+         {
+            "date": "Jul",
+            "sample": 0,
+            "score": 0,
+            "vsly": 0
+         }
+      ],
+      "Knowledge": [
+         {
+            "date": "Apr",
+            "sample": 31,
+            "score": 74,
+            "vsly": 0
+         },
+         {
+            "date": "May",
+            "sample": 100,
+            "score": 76,
+            "vsly": 0
+         },
+         {
+            "date": "Jun",
+            "sample": 45,
+            "score": 33,
+            "vsly": 0
+         },
+         {
+            "date": "Jul",
+            "sample": 110,
+            "score": 89,
+            "vsly": 0
+         }
+      ]
+   }
+}

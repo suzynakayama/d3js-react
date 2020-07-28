@@ -1,0 +1,48 @@
+.header {
+  background: #0071c5;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 3px 0 3px #dcdcdc;
+  height: 50px;
+  line-height: 50px;
+}
+
+.header-title {
+  color: white;
+  font-weight: bold;
+  margin-left: 100px;
+  font-size: var(--fs-lg);
+  letter-spacing: 0.2px;
+}
+
+.header-section {
+  padding: 0 20px;
+  position: relative;
+}
+
+.header-text {
+  color: #71b0df;
+  display: inline;
+  padding-right: 20px;
+  margin-right: 10px;
+  font-size: var(--fs-sm);
+  letter-spacing: -0.5px;
+  font-weight: bold;
+}
+
+.header-line {
+  background: #71b0df;
+  position: absolute;
+  width: 0.5px;
+  height: 30px;
+  top: 10px;
+  left: 207px;
+}
+
+.header-icons > svg {
+  color: #bcdaf0;
+  font-size: 20px;
+  margin: auto 10px;
+  cursor: pointer;
+}
