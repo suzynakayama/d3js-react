@@ -1,0 +1,58 @@
+.filters {
+
+}
+
+.filters-title {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.filters-container {
+  border: 1.3px solid #cccccc;
+  border-radius: .5rem;
+  width: 270px;
+  padding: 2rem;
+}
+
+.label-container {
+  display: block;
+  position: relative;
+  margin-bottom: 1rem;
+  color: #555555;
+  letter-spacing: -1px;
+  padding-left: 2.5rem;
+}
+
+.label-container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 1.3rem;
+  width: 1.3rem;
+}
+
+.square {
+  position: absolute;
+  top: 2px;
+  left: 0;
+  height: 1.3rem;
+  width: 1.3rem;
+  background: #edecec;
+  cursor: pointer;
+}
+
+.label-container input:checked ~ .square {
+  background: #0071c5;
+}
+
+.label-container svg {
+  margin-left: .8rem;
+  cursor: pointer;
+}
+
+/* .filters-container > form input {
+  border: none;
+  border-radius: 0;
+  background-color: #edecec;
+
+} */

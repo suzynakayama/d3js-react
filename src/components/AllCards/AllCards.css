@@ -1,0 +1,7 @@
+.all-cards {
+  grid-row: 0 / 1;
+  grid-column: 1 / 2;
+  /* display: flex;
+  flex-wrap: wrap; */
+  margin-top: 2rem;
+}

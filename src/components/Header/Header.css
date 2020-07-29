@@ -3,7 +3,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  box-shadow: 3px 0 3px #dcdcdc;
+  box-shadow: 0 4px 3px #dcdcdc;
   height: 50px;
   line-height: 50px;
 }
