@@ -5,14 +5,16 @@ import { faGlobe, faThumbtack } from "@fortawesome/free-solid-svg-icons";
 import Filters from '../Filters/Filters';
 
 import data from '../../data/data.json';
-import Card from '../Card/Card';
 import AllCards from '../AllCards/AllCards';
+import Graph from '../Graph/Graph';
 
 const Dashboard = () => {
-  const [filter, setFilter] = useState('all')
+  const [filter, setFilter] = useState('all');
+  const [graph, setGraph] = useState('Quality Score');
   const { areaData, gaugeData } = data;
+  const newGaugeData = filter === 'all' ? gaugeData : gaugeData.filter(data => data.score === 100);
+  const graphData = areaData[graph];
   console.log(areaData);
-  console.log(gaugeData);
   return (
     <div className="dashboard">
       <h1 className="dashboard-title">Performance Management</h1>
@@ -27,8 +29,8 @@ const Dashboard = () => {
       </div>
       <section className="dashboard-main">
         <Filters setFilter={setFilter} />
-        graph
-        <AllCards data={gaugeData} />
+        <Graph graphData={graphData} setGraph={setGraph} />
+        <AllCards data={newGaugeData} setGraph={setGraph} />
       </section>
     </div>
   );

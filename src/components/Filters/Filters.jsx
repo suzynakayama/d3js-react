@@ -19,7 +19,6 @@ const Filters = ({setFilter}) => {
     <div className="filters">
       <h3 className="filters-title">Filters</h3>
       <div className="filters-container">
-        {/* <form> */}
         <label className="label-container">
           <input
             type="radio"
@@ -42,7 +41,6 @@ const Filters = ({setFilter}) => {
           CQAs with Closed Loop
           <FontAwesomeIcon icon={faInfoCircle} />
         </label>
-        {/* </form> */}
       </div>
     </div>
   );

@@ -1,0 +1,68 @@
+.card {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 120px;
+  height: 200px;
+  border: 1px solid #ccc;
+  border-bottom-width: 1.5px;
+  border-radius: 3px;
+  margin-right: 1.5rem;
+  cursor: pointer;
+  position: relative;
+}
+
+.card-title,
+.card-text {
+  font-size: 1.3rem;
+  font-weight: 400;
+  text-align: center;
+}
+
+.card-title {
+  letter-spacing: -0.7px;
+  color: #0071c5;
+  margin-bottom: -2rem;
+}
+
+.card-text {
+  letter-spacing: -1px;
+  color: #555555;
+  margin-top: -2rem;
+}
+
+.card-text > span {
+  letter-spacing: normal;
+}
+
+.card-middle {
+  position: absolute;
+  left: 40%;
+}
+
+.card-middle > p {
+  color: #0071c5;
+  font-size: 1.7rem;
+}
+
+.card-middle > small {
+  color: #b2aabd;
+  font-size: 1.3rem;
+  font-weight: 500;
+}
+
+.clicked {
+  background: #f2fafe;
+  color: #00aeef;
+  border-color: #00aeef;
+  box-shadow: inset 2px 2px 5px #ddd;
+}
+
+.clicked .card-title {
+  color: #00aeef;
+}
+
+.clicked > svg :first-child {
+  fill: #00aeef;
+}

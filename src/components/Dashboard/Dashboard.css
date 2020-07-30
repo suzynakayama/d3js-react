@@ -9,14 +9,14 @@
   text-transform: uppercase;
   letter-spacing: 1px;
   margin-top: 2.5rem;
-  margin-left: 20%;
+  margin-left: 17%;
   padding-bottom: 1rem;
   font-size: 2.5rem;
 }
 
 .dashboard-grey {
   background: #edecec;
-  padding: 1rem 20%;
+  padding: 1rem 17%;
 }
 
 .dashboard-grey > section {
@@ -43,9 +43,9 @@
 }
 
 .dashboard-main {
-  padding: 3rem 20%;
+  padding: 3rem 17%;
   display: grid;
-  grid-template-columns: 45% 55%;
+  grid-template-columns: 40% 60%;
   grid-template-rows: 20% 80%;
   height: 85%;
 }
