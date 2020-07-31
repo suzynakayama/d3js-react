@@ -5,7 +5,7 @@ import Donut from '../Donut/Donut';
 const Card = ({ card, selected, setSelected, setGraph }) => {
   const { name, sample, score, vsly } = card;
 
-  const smallText = vsly ? vsly : "N/A"
+  const smallText = vsly ? vsly : "N/A";
 
   const handleClick = () => {
     setSelected(card.name);

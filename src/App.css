@@ -10,13 +10,9 @@
 }
 
 .header {
-  /* grid-row: 0 / 1;
-  grid-column: 0 / 2; */
   grid-area: header;
 }
 
 .sidebar {
-  /* grid-row: 0 / 2;
-  grid-column: 0 / 1; */
   grid-area: sidebar;
 }

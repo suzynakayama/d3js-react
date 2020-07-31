@@ -1,0 +1,43 @@
+.graph-options{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 180px;
+}
+
+.graph-title {
+  color: #555555;
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: .5px;
+  font-size: 2.2rem;
+}
+
+.graph-btn {
+  background: #0071c5;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 3px;
+  padding: 8px;
+  margin: 0 3px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.graph-btn:first-of-type {
+  margin-left: 0;
+}
+
+.graph-btn:last-of-type {
+  margin-right: 0;
+}
+
+.light {
+  background: #c0dcf1;
+}
+
+.dark {
+  background: #043c65;
+}

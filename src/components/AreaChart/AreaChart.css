@@ -1,3 +1,8 @@
-/* .area {
-  background-image: linear-gradient(blue, white);
-} */
+.area-chart {
+  padding-left: 6rem;
+}
+
+.text {
+  color: #555555;
+  font-size: 1.2rem;
+}

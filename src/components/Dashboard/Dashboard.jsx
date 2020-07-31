@@ -14,7 +14,7 @@ const Dashboard = () => {
   const { areaData, gaugeData } = data;
   const newGaugeData = filter === 'all' ? gaugeData : gaugeData.filter(data => data.score === 100);
   const graphData = areaData[graph];
-  console.log(areaData);
+
   return (
     <div className="dashboard">
       <h1 className="dashboard-title">Performance Management</h1>
@@ -29,7 +29,7 @@ const Dashboard = () => {
       </div>
       <section className="dashboard-main">
         <Filters setFilter={setFilter} />
-        <Graph graphData={graphData} setGraph={setGraph} />
+        <Graph graphData={ graphData } name={ graph }/>
         <AllCards data={newGaugeData} setGraph={setGraph} />
       </section>
     </div>
