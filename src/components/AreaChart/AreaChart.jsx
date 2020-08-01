@@ -3,7 +3,7 @@ import './AreaChart.css';
 import { select, curveCardinal, area, scalePoint, scaleLinear, axisBottom, stack, line } from "d3";
 
 const AreaChart = ({ graphData }) => {
-  const areaRef = useRef();
+  const divRef = useRef();
 
   const scores = graphData.map((each) => each.score);
 
@@ -14,7 +14,8 @@ const AreaChart = ({ graphData }) => {
   console.log(points);
 
   useEffect(() => {
-    const svg = select(areaRef.current);
+    const elem = select(divRef.current);
+    elem.select("svg").remove();
 
     const findMax = scores => {
       const sorted = scores.sort((a, b) => b - a);
@@ -47,6 +48,10 @@ const AreaChart = ({ graphData }) => {
       .y((item) => yScale(item[1]))
       .curve(curveCardinal);
     
+    const svg = elem.append("svg").attr('width', '100%').attr('height', '380px');
+
+    console.log(svg);
+    
     const gradient = svg
       .append("defs")
       .append("linearGradient")
@@ -54,7 +59,7 @@ const AreaChart = ({ graphData }) => {
       .attr("x1", "0%")
       .attr("x2", "0%")
       .attr("y1", "0%")
-      .attr("y2", "100%")
+      .attr("y2", "100%");
     
     gradient
       .append("stop")
@@ -69,80 +74,66 @@ const AreaChart = ({ graphData }) => {
       .style("stop-opacity", .3);
     
     svg
-      .select(".area")
+      .selectAll(".area")
       .data(layer)
+      .enter()
+      .append("path")
       .join("path")
       .style("fill", "url(#grad)")
+      .attr("class", "area")
       .attr("d", areaGenerator)
       .attr("transform", "translate(10, 30)");
     
     svg
-      .select(".line")
+      .selectAll(".line")
       .data(layer)
-      .attr('class', 'line')
+      .enter()
+      .append("path")
+      .attr("class", "line")
       .attr("fill", "none")
       .attr("stroke", "#0071c5")
-      .attr('stroke-width', 1.5)
+      .attr("stroke-width", 1.5)
       .attr("transform", "translate(10, 30)")
-      .attr('d', lineGenerator);
+      .attr("d", lineGenerator);
     
-    svg
-      .selectAll("circle")
-      .data(points)
-      .attr("fill", "#0071c5")
-      .attr("stroke", "white")
-      .attr("stroke-width", 2)
-      .attr("r", 5)
-      .attr("cx", (item) => xScale(item[0]))
-      .attr("cy", (item) => yScale(item[1]))
-      .attr("transform", "translate(10, 30)");
-    
-    const g = svg.append('g');
-      
-    g
-      // .selectAll("circle")
-      // .append('g')
-      .selectAll(".text")
+    const g = svg
+      .selectAll(".myCircle")
       .data(points)
       .enter()
-      .append("text")
+      .append("g")
+      .attr("transform", "translate(10, 30)");
+    
+    g
+      .append('circle')
+      .attr('class', 'myCircle')
+      .attr("fill", "#0071c5")
+      .attr("stroke", "white")
+      .attr("stroke-width", 3)
+      .attr("r", 7)
+      .attr("cx", (item) => xScale(item[0]))
+      .attr("cy", (item) => yScale(item[1]));
+      
+    g.append("text")
       .attr("class", "text")
-      // .attr('fill', 'currentColor')
-      .attr("y", "10")
-      // .attr("dx", (item, idx) => item[0])
-      // .attr('x', (item) => item[0])
-      //   .attr('y', 10)
-      //   // .attr()
+      .attr('fill', '#555555')
+      .attr("y", (item) => yScale(item[1]) -15)
+      .attr("dx", (item) => xScale(item[0]) - 6)
       .text((item) => `${item[1]}%`);
     
     const xAxis = axisBottom(xScale);
-    svg.select('.x-axis')
-      .attr('transform', 'translate(10, 220)')
+    svg
+      .append("g")
+      .attr("class", "x-axis")
+      .attr("color", "#555555")
+      .attr("transform", "translate(10, 220)")
       .call(xAxis);
     
   }, [graphData, points, scores]);
 
   return (
-    <div className="area-chart">
-      <svg ref={ areaRef } width="100%" height="380px">
-        <path className="area"/>
-        <path className="line"/>
-        <circle className="circle">
-        <text className="text"/></circle>
-        <circle className="circle">
-        <text className="text"/></circle>
-        <circle className="circle">
-        <text className="text"/></circle>
-        <circle className="circle">
-        <text className="text"/></circle>
-        {/* <circle className="circle" />
-        <circle className="circle" />
-        <circle className="circle" />
-        <circle className="circle" /> */}
-        <g className="x-axis" />
-      </svg>
+    <div ref={divRef} className="area-chart">
     </div>
   );
 };
 
-export default AreaChart
+export default AreaChart;

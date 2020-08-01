@@ -3,3 +3,15 @@
   grid-column: 2/3;
   padding: 10px;
 }
+
+.graph-nothing {
+  display: flex;
+  align-items: center;
+}
+
+.nothing {
+  color: #555555;
+  font-weight: 400;
+  letter-spacing: 1px;
+  font-size: 2.5rem;
+}
