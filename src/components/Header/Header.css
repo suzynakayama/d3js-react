@@ -42,7 +42,7 @@
 
 .header-icons > svg {
   color: #bcdaf0;
-  font-size: 20px;
+  font-size: var(--fs-lg);
   margin: auto 10px;
   cursor: pointer;
 }

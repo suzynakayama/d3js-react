@@ -36,7 +36,7 @@
 
 .dashboard-subtitle {
   letter-spacing: 1.2px;
-  font-size: 2.5rem;
+  font-size: var(--fs-xxl);
   display: inline;
   font-weight: 400;
   margin-left: .5rem;

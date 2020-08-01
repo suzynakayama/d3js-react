@@ -1,9 +1,5 @@
-.filters {
-
-}
-
 .filters-title {
-  font-size: 1.5rem;
+  font-size: var(--fs-md);
   margin-bottom: 1rem;
 }
 
@@ -49,10 +45,3 @@
   margin-left: .8rem;
   cursor: pointer;
 }
-
-/* .filters-container > form input {
-  border: none;
-  border-radius: 0;
-  background-color: #edecec;
-
-} */

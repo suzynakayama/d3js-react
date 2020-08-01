@@ -15,7 +15,7 @@
 
 .card-title,
 .card-text {
-  font-size: 1.3rem;
+  font-size: var(--fs-sm);
   font-weight: 400;
   text-align: center;
 }
@@ -43,12 +43,12 @@
 
 .card-middle > p {
   color: #0071c5;
-  font-size: 1.7rem;
+  font-size: var(--fs-md);
 }
 
 .card-middle > small {
   color: #b2aabd;
-  font-size: 1.3rem;
+  font-size: var(--fs-sm);
   font-weight: 500;
 }
 

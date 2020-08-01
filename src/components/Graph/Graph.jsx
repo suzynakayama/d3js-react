@@ -4,7 +4,7 @@ import AreaChart from '../AreaChart/AreaChart';
 import GraphTitle from '../GraphTitle/GraphTitle';
 
 const Graph = ({ graphData, name, filter }) => {
-  return filter === "all" ? (
+  return filter.length ? (
     <div className="graph">
       <GraphTitle name={name} />
       <AreaChart graphData={graphData} />
