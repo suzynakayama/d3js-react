@@ -9,7 +9,7 @@
   text-transform: uppercase;
   letter-spacing: 1px;
   margin-top: 2.5rem;
-  margin-left: 17%;
+  padding: 0 17%;
   padding-bottom: 1rem;
   font-size: 2.5rem;
 }
@@ -48,4 +48,20 @@
   grid-template-columns: 40% 60%;
   grid-template-rows: 20% 80%;
   height: 85%;
+}
+
+@media (min-width: 1200px) {
+  .dashboard-title,
+  .dashboard-grey,
+  .dashboard-main {
+    padding: 3rem 5%;
+  }
+}
+
+@media (min-width: 1600px) {
+  .dashboard-title,
+  .dashboard-grey,
+  .dashboard-main {
+    padding: 3rem 17%;
+  }
 }

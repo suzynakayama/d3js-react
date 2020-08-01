@@ -1,7 +1,24 @@
-.area-chart {
-  padding-left: 6rem;
+@media (min-width: 1200px) {
+  .graph-chart {
+    width: 90%;
+    height: 250px;
+  }
+  .area-chart {
+    padding-left: 0rem;
+  }
 }
 
-.text {
-  font-size: 1.2rem;
+@media (min-width: 1600px) {
+  .graph-chart {
+    width: 100%;
+    height: 350px;
+  }
+
+  .area-chart {
+    padding-left: 6rem;
+  }
+
+  .text {
+    font-size: 1.2rem;
+  }
 }

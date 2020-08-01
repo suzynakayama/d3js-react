@@ -4,8 +4,9 @@ import Card from '../Card/Card';
 
 const AllCards = ({ data, setGraph }) => {
   const [selected, setSelected] = useState('Quality Score');
+
   return (
-    <div className="all-cards">
+    <div className='all-cards'>
       {data.map((card) => (
         <Card
           key={ card.name }
@@ -18,4 +19,4 @@ const AllCards = ({ data, setGraph }) => {
   );
 };
 
-export default AllCards
+export default AllCards;
