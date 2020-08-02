@@ -11,9 +11,19 @@ const AreaChart = ({ graphData }) => {
 
   useEffect(() => {
     const elem = select(divRef.current);
+    const width = parseInt(elem.style("width"), 10);
+    const height = parseInt(elem.style("height"), 10);
+    console.log('w', width);
+    console.log(height);
 
     // clean up svg to create new one with the new data
     elem.select('svg').remove();
+
+    // append the svg to the div element and get the svg width and height
+    const svg = elem.append('svg').attr('viewBox', `0 0 ${Math.min(width, height)} ${Math.min(width, height)}`).attr('width', '100%').attr('height', '100%').attr('preserveAspectRatio', 'xMinYMin').attr('class', 'svg-chart');
+    
+    const svgWidth = parseInt(svg.style("width"), 10);
+    const svgHeight = parseInt(svg.style("height"), 10);
 
     // ----------------- helper functions -----------------
     const findMax = scores => {
@@ -27,11 +37,9 @@ const AreaChart = ({ graphData }) => {
 
     const xScale = scalePoint()
       .domain(graphData.map((d) => d.date))
-      .range([0, 500]);
+      .range([0, svgWidth * 0.8]);
     
-    const yScale = scaleLinear()
-      .domain([0, max])
-      .range([175, 0]);
+    const yScale = scaleLinear().domain([0, max]).range([svgHeight * 0.7, 0]);
     
     const areaGenerator = area()
       .x((item) => xScale(item.data.date))
@@ -44,9 +52,6 @@ const AreaChart = ({ graphData }) => {
       .x((item) => xScale(item.data.date))
       .y((item) => yScale(item[1]))
       .curve(curveCardinal);
-    
-    // append the svg to the div element
-    const svg = elem.append('svg').attr('class', 'graph-chart');
     
     // ----------------- create the gradient -----------------
     const gradient = svg
@@ -126,7 +131,7 @@ const AreaChart = ({ graphData }) => {
       .append('g')
       .attr('class', 'x-axis')
       .attr('color', '#555555')
-      .attr('transform', 'translate(10, 220)')
+      .attr('transform', `translate(10, ${svgHeight * 0.9})`)
       .call(xAxis);
     
   }, [graphData, points, scores]);

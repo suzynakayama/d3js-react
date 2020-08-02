@@ -28,4 +28,5 @@ body {
   -moz-osx-font-smoothing: grayscale;
   scroll-behavior: smooth;
   font-size: var(--fs-md);
+  overflow-x: hidden;
 }
