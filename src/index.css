@@ -28,5 +28,16 @@ body {
   -moz-osx-font-smoothing: grayscale;
   scroll-behavior: smooth;
   font-size: var(--fs-md);
-  overflow-x: hidden;
+  overflow: hidden;
+}
+
+@media (max-width: 800px) {
+  :root {
+    --fs-xs: 0.8rem;
+    --fs-sm: 1.2rem;
+    --fs-md: 1.4rem;
+    --fs-lg: 1.8rem;
+    --fs-xl: 2.2rem;
+    --fs-xxl: 2.4rem;
+  }
 }
