@@ -1,6 +1,15 @@
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
 .filters-title {
   font-size: var(--fs-md);
   margin-bottom: 1rem;
+  width: 100%;
+  text-align: center;
 }
 
 .filters-container {
@@ -44,4 +53,14 @@
 .label-container svg {
   margin-left: .8rem;
   cursor: pointer;
+}
+
+@media (min-width: 1200px) {
+  .filters {
+    display: block;
+  }
+
+  .filters-title {
+    text-align: left;
+  }
 }

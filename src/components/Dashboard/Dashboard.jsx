@@ -29,8 +29,8 @@ const Dashboard = () => {
       </div>
       <section className='dashboard-main'>
         <Filters setFilter={ setFilter } />
-        <Graph graphData={ graphData } name={ graph } filter={ newGaugeData } />
         <AllCards data={ newGaugeData } setGraph={ setGraph } />
+        <Graph graphData={ graphData } name={ graph } filter={ newGaugeData } />
       </section>
     </div>
   );

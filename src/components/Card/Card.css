@@ -1,4 +1,5 @@
 .card {
+  margin: 1rem auto;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
@@ -8,7 +9,6 @@
   border: 1px solid #ccc;
   border-bottom-width: 1.5px;
   border-radius: 3px;
-  margin-right: 1.5rem;
   cursor: pointer;
   position: relative;
 }
@@ -65,4 +65,11 @@
 
 .clicked > svg :first-child {
   fill: #00aeef;
+}
+
+@media (min-width: 1200px) {
+  .card {
+    margin: 0;
+    margin-right: 1.5rem;
+  }
 }

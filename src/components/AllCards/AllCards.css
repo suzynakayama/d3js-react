@@ -1,8 +1,13 @@
 .all-cards {
-  grid-row: 0 / 1;
-  grid-column: 1 / 2;
   display: flex;
   flex-wrap: wrap;
   margin-top: 2rem;
-  height: 430px;
+}
+
+@media (min-width: 1200px) {
+  .all-cards {
+    grid-row: 0 / 1;
+    grid-column: 1 / 2;
+    height: 430px;
+  }
 }
