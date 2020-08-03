@@ -29,6 +29,8 @@ body {
   scroll-behavior: smooth;
   font-size: var(--fs-md);
   overflow: hidden;
+  height: 100vh;
+  width: 100vw;
 }
 
 @media (max-width: 800px) {
