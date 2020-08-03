@@ -13,8 +13,6 @@ const AreaChart = ({ graphData }) => {
     const elem = select(divRef.current);
     const width = parseInt(elem.style("width"), 10);
     const height = parseInt(elem.style("height"), 10);
-    console.log('w', width);
-    console.log(height);
 
     // clean up svg to create new one with the new data
     elem.select('svg').remove();
