@@ -12,7 +12,8 @@ const Donut = ({ score }) => {
 
     const arcGenerator = arc().innerRadius(40).outerRadius(46);
 
-    const pieGenerator = pie().sort(null);
+    const pieGenerator = pie()
+      // .sort(null);
 
     svg
       .selectAll('.slice')

@@ -18,7 +18,13 @@ const AreaChart = ({ graphData }) => {
     elem.select('svg').remove();
 
     // append the svg to the div element and get the svg width and height
-    const svg = elem.append('svg').attr('viewBox', `0 0 ${Math.min(width, height)} ${Math.min(width, height)}`).attr('width', '100%').attr('height', '100%').attr('preserveAspectRatio', 'xMinYMin').attr('class', 'svg-chart');
+    const svg = elem
+      .append('svg')
+      .attr('viewBox', `0 0 ${Math.min(width, height)} ${Math.min(width, height)}`)
+      .attr('width', '100%')
+      .attr('height', '100%')
+      .attr('preserveAspectRatio', 'xMinYMin')
+      .attr('class', 'svg-chart');
     
     const svgWidth = parseInt(svg.style("width"), 10);
     const svgHeight = parseInt(svg.style("height"), 10);
@@ -37,7 +43,9 @@ const AreaChart = ({ graphData }) => {
       .domain(graphData.map((d) => d.date))
       .range([0, svgWidth * 0.8]);
     
-    const yScale = scaleLinear().domain([0, max]).range([svgHeight * 0.7, 0]);
+    const yScale = scaleLinear()
+      .domain([0, max])
+      .range([svgHeight * 0.7, 0]);
     
     const areaGenerator = area()
       .x((item) => xScale(item.data.date))
@@ -62,10 +70,10 @@ const AreaChart = ({ graphData }) => {
       .attr('y2', '100%');
     
     gradient
-      .append('stop')
-      .attr('offset', '0%')
-      .style('stop-color', '#167dca')
-      .style('stop-opacity', 1);
+      .append("stop")
+      .attr("offset", "0%")
+      .style("stop-color", "#167dca")
+      .style("stop-opacity", 1);
     
     gradient
       .append('stop')
